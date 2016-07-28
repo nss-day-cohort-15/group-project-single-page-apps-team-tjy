@@ -3,6 +3,7 @@
 #chatBox {
     border-right: 2px solid black;
     margin-bottom: 3%;
+    float: left;
 }
 
 #checkboxes {
@@ -20,6 +21,9 @@
     margin-bottom: 250px;
 
 }
+/*#messageLine {
+  float: left;
+}*/
 
 #clearButton {
   display: inline;
@@ -32,9 +36,14 @@
   height: 80px;
 }
 
-h1, h2, h4 {
+h1 {
   text-align: center;
 }
-
+.staysBlack {
+  background-color: grey;
+}
+.stayLarge {
+  font-size: 2em;
+}
 
 
