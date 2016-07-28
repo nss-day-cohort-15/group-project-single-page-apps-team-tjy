@@ -1,0 +1,46 @@
+#chatBox {
+    border-right: 2px solid black;
+    margin-bottom: 3%;
+}
+
+#checkboxes {
+    display: block;
+    margin-left: 350px;
+    width: 300px;
+}
+
+.container {
+    text-align: center;
+    border: 2px solid black;
+    width: 80%;
+    height: 500px;
+    margin-top: 250px;
+    margin-bottom: 250px;
+
+}
+
+#clearButton {
+  display: inline;
+  background-color: #B5B5B4;
+}
+
+#userInput {
+  width: 700px;
+  float: right;
+  height: 80px;
+}
+
+h1, h2, h4 {
+  text-align: center;
+}
+
+
+/*-----Classes to add in JS-----*/
+.darkThemeColors {
+	background: #95a5a6;
+	color: white;
+}
+
+.largeTextLetters {
+	font-size: 3em;
+}
