@@ -1,3 +1,4 @@
+
 #chatBox {
     border-right: 2px solid black;
     margin-bottom: 3%;
@@ -35,6 +36,7 @@ h1, h2, h4 {
 }
 
 
+
 /*-----Classes to add in JS-----*/
 .darkThemeColors {
 	background: #95a5a6;
@@ -44,3 +46,4 @@ h1, h2, h4 {
 .largeTextLetters {
 	font-size: 3em;
 }
+
