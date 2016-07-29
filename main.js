@@ -2,9 +2,11 @@
 var chatBox = document.getElementById('chatBox');
 var userInput = document.getElementById('userInput');
 var clearButton = document.getElementById("clearButton");
+var container = document.querySelector(".container");
+var darkTheme = document.getElementById('darkThemeCheckbox');
+var largeText = document.getElementById('largeTextCheckbox');
 
-
-// even listen to enter key //
+// event listener for enter key //
 userInput.addEventListener("keyup", checkkey);
 function checkkey(event) {
   // console.log(event);
@@ -13,48 +15,72 @@ function checkkey(event) {
   }
  }
 
-// for the clear button//
+// for the clear  message button//
 clearButton.addEventListener("click", clearmessage);
  function clearmessage() {
-  var message = userInput.value;
+  // var message = chatBox.innerHTML;
   chatBox.innerHTML = "";
-  // console.log("clearButton is clicked yonatan");
-}
 
-// the output to be displayed//
+  }
+
+// output to be displayed //
 function addMessage() {
     var message = userInput.value;
     chatBox.innerHTML += `<p id="messageLine"> ${message} <button type="button" class="deleteButton"  name = "delete" >Delete</button> </p>`;
-  // for the delete button //
+// var for the delete button  to each line of text //
   var deleteButtons = document.getElementsByClassName("deleteButton");
     for (var i = 0; i < deleteButtons.length; i++) {
       deleteButtons[i].addEventListener("click", testDelete)
+       // to clear the text field after each insertion
+       userInput.value = "";
     }
 }
-
+// function for delete button to each line of text
 function testDelete(deleteEvent) {
   var paragraph = document.querySelectorAll("p")
-  // console.log(deleteEvent.target.parentNode.id)
   deleteEvent.target.parentNode.innerHTML = "";
 }
 
+// // // check boxes
 
-// // // copied from thomas
-// var darkTheme = document.getElementById('darkThemeCheckbox');
-// var largeText = document.getElementById('largeTextCheckbox');
-// var container = document.querySelectorAll(".container");
+// "Dark Theme" check box listener to make background darker in message box
+darkTheme.addEventListener('click', function darkThemeEvent () {
+    container.classList.toggle("darkThemeColors");
+});
 
-// //----"Dark Theme" check box listener to make background darker in message box
-// darkTheme.addEventListener('click', function darkThemeEvent () {
-//     chatBox.classList.toggle("staysBlack");
+//----"Large Text" check box listener to make text large in message box
+largeText.addEventListener('click', function largeTextEvent () {
+    container.classList.toggle("LargeTextLetters");
 // //
-// // });
+});
 
-// //----"Large Text" check box listener to make text large in message box
-// largeText.addEventListener('click', function largeTextEvent () {
-//     chatBox.classList.toggle("stayLarge");
-// //
-// // });
+ //to run json file
+function chattyfile(chattyText) {
+  console.log(chattyText);
+    var message = userInput.value;
+    chatBox.innerHTML += `<p id="messageLine"> ${message} <button type="button" class="deleteButton"  name = "delete" >Delete</button> </p>`;
+// var for the delete button  to each line of text //
+  var deleteButtons = document.getElementsByClassName("deleteButton");
+    for (var i = 0; i < deleteButtons.length; i++) {
+      deleteButtons[i].addEventListener("click", testDelete)
+       // to clear the text field after each insertion
+       userInput.value = "";
+    }
+}
+Chatty.getChattyText(chattyfile);
+
+
+// to disable clear button
+ function checkChatBox () {
+  console.log(checkChatBox);
+  if (chatBox.innerHTML === ""){
+    clearButton.getAttribute.disabled = true;
+} else{
+  clearButton.getAttribute.disabled = false;
+}
+// userInput.value = "";
+}
+
 
 
 
