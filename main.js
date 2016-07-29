@@ -39,6 +39,7 @@ function addMessage() {
 function testDelete(deleteEvent) {
   var paragraph = document.querySelectorAll("p")
   deleteEvent.target.parentNode.innerHTML = "";
+
 }
 
 // // // check boxes
