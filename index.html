@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Chatty Group JTY</title>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
-</head>
-<body>
-<!-- the whole navbar -->
+  <head>
+      <title>Chatty Group JTY</title>
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+  <!-- the whole navbar -->
 
-  <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="page-header">
-        <h1>JTY CHATTY GROUP</h1>
-      </div>
-      <div class="navbar-form"  role="Message">
-        <a class="navbar-brand" href="#">
-          <img alt="Brand" src="Chatty.png" width="250" height=100>
-        </a>
-        <!-- input text area -->
-        <div class="form-group">
-            <input type="text" id="userInput"  placeholder="Enter Message">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="page-header">
+          <h1>JTY CHATTY GROUP</h1>
         </div>
-      <!-- clear button -->
-          <button id="clearButton" class="btn btn-default">Clear Messages board</button>
-      </div>
-      <!-- checker boxes -->
-      <div id ="checkboxes">
-          <input id="darkThemeCheckbox" type="checkbox"><span class="staysBlack">Dark Theme</span></input>
-          <input id="largeTextCheckbox" type="checkbox"><span class="staysBlack">Large Text</span></input>
-      </div>
-  </nav>
-<!-- message output -->
-  <div class="container">
-      <h2>Messages: </h2>
-      <div id="chatBox">
-  </div>
+        <div class="navbar-form"  role="Message">
+          <a class="navbar-brand" href="#">
+            <img alt="Brand" src="Chatty.png" width="250" height=100>
+          </a>
+          <!-- input text area -->
+          <div class="form-group">
+              <input type="text" id="userInput"  placeholder="Enter Message">
+          </div>
+        <!-- clear button -->
+            <button id="clearButton" class="btn btn-default">Clear Messages board</button>
+        </div>
+        <!-- checker boxes -->
+        <div id ="checkboxes">
+            <input id="darkThemeCheckbox" type="checkbox"><span class="staysBlack">Dark Theme</span></input>
+            <input id="largeTextCheckbox" type="checkbox"><span class="stayLarge">Large Text</span>
+            </input>
+        </div>
+    </nav>
+  <!-- message output -->
+    <div class="container">
+        <h2>Messages: </h2>
+        <div id="chatBox"></div>
+    </div>
 
-
-
-  <script src="main.js"></script>
-</body>
+    <script src="main.js"></script>
+    <script src="xhr.js"></script>
+    <!-- <script src="clear.js"></script> -->
+  </body>
 </html>
 
 

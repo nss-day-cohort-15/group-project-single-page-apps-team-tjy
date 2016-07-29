@@ -1,8 +1,8 @@
 
 
 #chatBox {
-    border-right: 2px solid black;
     margin-bottom: 3%;
+    float: left;
 }
 
 #checkboxes {
@@ -12,15 +12,19 @@
 }
 
 .container {
-    text-align: center;
+    /*text-align: center;*/
     border: 2px solid black;
     width: 80%;
     height: 500px;
     margin-top: 250px;
     margin-bottom: 250px;
+    overflow: auto;
 
 }
 
+.deleteButton {
+  background-color: #6E92A1;
+}
 #clearButton {
   display: inline;
   background-color: #B5B5B4;
@@ -30,11 +34,20 @@
   width: 700px;
   float: right;
   height: 80px;
+  font-size: 2em;
 }
 
-h1, h2, h4 {
+h1 {
   text-align: center;
 }
-
+.darkThemeColors {
+  background-color: black;
+  /*background-color: #AFAFAF;*/
+  color: white;
+  border-color: white;
+}
+.LargeTextLetters {
+  font-size: 1.5em;
+}
 
 
