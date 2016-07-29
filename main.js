@@ -20,6 +20,7 @@ clearButton.addEventListener("click", clearmessage);
  function clearmessage() {
   // var message = chatBox.innerHTML;
   chatBox.innerHTML = "";
+  checkChatBox();
 
   }
 
@@ -31,14 +32,21 @@ function addMessage() {
   var deleteButtons = document.getElementsByClassName("deleteButton");
     for (var i = 0; i < deleteButtons.length; i++) {
       deleteButtons[i].addEventListener("click", testDelete)
+      checkChatBox();
        // to clear the text field after each insertion
        userInput.value = "";
     }
+    checkChatBox();
 }
 // function for delete button to each line of text
 function testDelete(deleteEvent) {
-  var paragraph = document.querySelectorAll("p")
-  deleteEvent.target.parentNode.innerHTML = "";
+  console.log("test delete running");
+  // var paragraph = document.querySelectorAll("p")
+
+  // console.log(deleteEvent.target.parentElement)
+  //using "" doesn't clear evthg so we use .remove
+  deleteEvent.target.parentElement.remove();
+  checkChatBox();
 }
 
 // // // check boxes
@@ -56,31 +64,37 @@ largeText.addEventListener('click', function largeTextEvent () {
 
  //to run json file
 function chattyfile(chattyText) {
-  console.log(chattyText);
-    var message = userInput.value;
+  // console.log(chattyText);
+  for (var i = 0; i < chattyText.length; i++) {
+    var message = chattyText[i].message;
     chatBox.innerHTML += `<p id="messageLine"> ${message} <button type="button" class="deleteButton"  name = "delete" >Delete</button> </p>`;
+
+  }
+    // var message = userInput.value;
+
 // var for the delete button  to each line of text //
   var deleteButtons = document.getElementsByClassName("deleteButton");
     for (var i = 0; i < deleteButtons.length; i++) {
       deleteButtons[i].addEventListener("click", testDelete)
        // to clear the text field after each insertion
-       userInput.value = "";
+       // userInput.value = "";
     }
 }
-Chatty.getChattyText(chattyfile);
 
 
-// to disable clear button
+
+// to disable clear button and make sure to call this fun in all preceding fun
  function checkChatBox () {
-  console.log(checkChatBox);
   if (chatBox.innerHTML === ""){
-    clearButton.getAttribute.disabled = true;
+  // console.log('if checkChatBox running')
+    clearButton.disabled = true;
 } else{
-  clearButton.getAttribute.disabled = false;
+  // console.log('else checkChatBox running', chatBox.innerHTML)
+  clearButton.disabled = false;
 }
 // userInput.value = "";
 }
 
-
+Chatty.getChattyText(chattyfile);
 
 
