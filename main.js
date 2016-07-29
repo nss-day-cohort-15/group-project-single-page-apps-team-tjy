@@ -20,14 +20,14 @@ function addMessage () {
 clearButton.addEventListener("click", clearMessage);
 
 function clearMessage(event) {
-  console.log('addMessage is running')
+  console.log('clearMessage is running')
   chatBox.innerHTML = "";
   checkChatBox();
 }
 
 // This will disable the first button with a class of "button-message"
  function checkChatBox () {
-  console.log(chatBox.innerHTML)
+  console.log(chatBox.innerHTML);
   if (chatBox.innerHTML ===""){
     console.log()
     clearButton.disabled = true;
