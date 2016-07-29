@@ -82,6 +82,7 @@ function chattyfile(chattyText) {
 }
 
 
+
 // to disable clear button and make sure to call this fun in all preceding fun
  function checkChatBox () {
   if (chatBox.innerHTML === ""){

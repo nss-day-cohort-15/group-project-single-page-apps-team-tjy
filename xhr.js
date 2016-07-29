@@ -11,7 +11,7 @@ var Chatty = (function () {
                 chattyText = JSON.parse(evt.target.responseText);
                 // console.log(chattyText.messages);
                 callback(chattyText.messages)
-            })
+             })
             xhr.send()
         }
     }
